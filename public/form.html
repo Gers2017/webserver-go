@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go form</title>
+  </head>
+  <body>
+    {{if .Success}}
+    <h1>Thanks for your message!</h1>
+    <h2>Your Favorite animal is: {{ .Animal }}</h2>
+    {{else}}
+    <h1>Contact</h1>
+    <form method="POST">
+      <label>Email:</label><br />
+      <input type="text" name="email" /><br />
+
+      <label>Subject:</label><br />
+      <input type="text" name="subject" /><br />
+
+      <label>Message:</label><br />
+      <textarea name="message"></textarea><br />
+
+      <br />
+      <h4>Favorite animal</h4>
+      <label for="chicken">🐔🐔🐔</label>
+      <input type="radio" name="animal" id="chicken" value="chicken" />
+
+      <label for="fish">🐟🐟🐟</label>
+      <input type="radio" name="animal" id="fish" value="fish" />
+
+      <label for="kraken">🐙🐙🐙</label>
+      <input type="radio" name="animal" id="kraken" value="kraken" />
+
+      <br />
+
+      <input type="submit" />
+    </form>
+    {{end}}
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODOS</title>
+</head>
+<body>
+<style>
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+    .done {
+    color: teal;
+    }
+</style>
+<h1>{{.PageTitle}}</h1>
+<ul>
+    {{range .Todos}}
+    {{if .Done}}
+    <li class="done">{{.Title}}</li>
+    {{else}}
+    <li>{{.Title}}</li>
+    {{end}}
+    {{end}}
+</ul>
+<footer>{{.PageFooter}}</footer>
+</body>
+</html>

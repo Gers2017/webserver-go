@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  max-width: 600px;
+  padding: 1rem;
+  box-shadow: 0px 4px 16px -4px rgba(0, 0, 0, 0.33);
+}
+footer {
+  min-height: 8vh;
+  color: whitesmoke;
+  background-color: dodgerblue;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
